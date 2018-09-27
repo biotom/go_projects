@@ -11,7 +11,7 @@ func Sqrt(x float64) float64  {
 	for i:= 0; i <= loopNum; i++{
 	if math.Abs(z-(z-(z*z - x) / (2 * z))) < 0.0000000000000005{
 		fmt.Printf("Close answer reached in %d steps:\n", i + 1)
-		return z
+		break
 		
 	}else if i == loopNum{
 	
