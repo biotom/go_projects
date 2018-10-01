@@ -1,0 +1,28 @@
+func primeFinder(term int) bool{
+	for i:=1;i<=(term/2);i++{
+		if term / i == 0{
+			return false
+		}
+	}
+	return true
+	
+}
+func fibonacci() func() int {
+	firstTerm := 1
+	secondTerm := 0
+	
+	return func() int{
+		retValue := secondTerm
+		secondTerm, firstTerm = firstTerm, firstTerm + secondTerm
+		return retValue
+	}
+
+}
+
+
+func main() {
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
+}
